@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Source+Serif+Pro&display=swap');
+
+:root {
+    --primary-color: #e8eaed;
+    --border-color: #3c4043;
+    --background-color: #202124;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+    box-sizing: border-box;
+    font-family: arial, 'Lora', 'Source Serif Pro', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: var(--background-color);
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#screen {
+    width: 26rem;
+    height: 4.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    margin-bottom: 0.125rem;
+    padding: 2rem 1rem 0 0.5rem;
+}
+
+#screen:hover {
+    background: #303134;
+    border: 1px solid #303134;
+}
+
+#screen > div {
+    width: 100%;
+}
+
+#result {
+    float: right;
+    font-size: 1.75rem;
+}
+
+table {
+    border-spacing: 0.125rem;
+}
+
+td > div {
+    color: var(--primary-color);
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2.25rem;
+    margin: 0.25rem;
+    border-radius: 0.25rem;
+    padding: 0.125rem 2.5rem;
+    cursor: default;
+}
+
+.nums {
+    background: #3c4043;
+    border: 1px solid #3c4043;
+}
+
+.nums:hover {
+    background: #424548;
+    border: 1px solid #424548;
+}
+
+.nums:active, .nums:focus {
+    border: 1px solid #80868b;
+    box-shadow: 1px 1px 15px 0px #171717;
+}
+
+.operator {
+    background: #5f6368;
+    border: 1px solid #5f6368;
+}
+
+.operator:hover {
+    background: #70757a;
+    border: 1px solid #70757a;
+}
+
+.operator:active, .operator:focus {
+    border: 1px solid #9aa0a6;
+    box-shadow: 1px 1px 15px 0px #171717;
+}
+
+.weak {
+    font-size: 1.125rem;
+}
+
+#equal {
+    color: #202124;
+    font-weight: 600;
+    background: #8ab4f8;
+    border: 1px solid #8ab4f8;
+}
+
+#equal:hover {
+    background: #aecbfa;
+    border: 1px solid #aecbfa;
+}
+
+#equal:active, #active:focus {
+    box-shadow: 1px 1px 15px 0px #171717;
+}
+
+/* media query for responsiveness */
+
+@media only screen and (max-width: 450px) {
+    #screen {
+        width: 19rem;
+        height: 4rem;
+    }
+
+    #result {
+        font-size: 1.5rem;
+    }
+
+    td > div {
+        margin: 0.125rem;
+        padding: 0 1.75rem;
+        line-height: 1.75rem;
+    }
+}
+
+@media only screen and (max-height: 300px) {
+    section {
+        height: 150vh;
+    }
+}
